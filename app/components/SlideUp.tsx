@@ -1,0 +1,45 @@
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
+
+export default function SlideUp({ children }: { children: React.ReactNode }) {
+    const ref = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        if(typeof IntersectionObserver === 'undefined') { //Ignore for older browsers
+            setIsVisible(true);
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting);
+                    if(entry.isIntersecting && el) {
+                        observer.unobserve(el);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            }
+        );
+
+        observer.observe(el);
+
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div ref={ref} className={
+            `transform transition-transform transition-opacity duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-15 opacity-0'}`
+        } aria-hidden={!isVisible}>
+            {children}
+        </div>
+    );
+}
