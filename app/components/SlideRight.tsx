@@ -25,7 +25,7 @@ export default function SlideRight({ children }: { children: React.ReactNode }) 
                 });
             }, {
                 root: null,
-                rootMargin: '-50px 0px',
+                rootMargin: '-100px',
                 threshold: 0.05
             }
         );
@@ -37,7 +37,7 @@ export default function SlideRight({ children }: { children: React.ReactNode }) 
 
     return (
         <div ref={ref} className={
-            `transform transition-transform transition-opacity duration-1000 ease-out ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-100 opacity-0'}`
+            `transform transition-transform transition-opacity duration-1000 ease-out ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-50 opacity-0'}`
         } aria-hidden={!isVisible}>
             {children}
         </div>
