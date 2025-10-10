@@ -25,7 +25,7 @@ export default function SlideRight({ children }: { children: React.ReactNode }) 
                 });
             }, {
                 root: null,
-                rootMargin: '0px',
+                rootMargin: '-50px 0px',
                 threshold: 0.05
             }
         );
