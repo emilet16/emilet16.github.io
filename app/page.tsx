@@ -6,9 +6,9 @@ import SlideRight from "./components/SlideRight";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-3xl space-y-8">
+    <div className="w-full max-w-3xl">
       <div id="about" className="flex flex-col space-y-4">
-        <h2 className="text-2xl font-bold">💬 About me</h2>
+        <h2 className="text-2xl font-bold mt-20">💬 About me</h2>
         
         <SlideRight>
           <div className="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-800 shadow-md/30 rounded-xl items-center gap-8 p-4 md:p-8">
@@ -50,7 +50,7 @@ export default function Home() {
       </div>
 
       <div id="projects" className="flex flex-col space-y-4">
-        <h2 className="text-2xl font-bold">📌 Projects</h2>
+        <h2 className="text-2xl font-bold mt-20">📌 Projects</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Project title="Quartier" subtitle="Bluetooth Business Card" 
@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       
       <div id="contact" className="flex flex-col space-y-4">
-        <h2 className="text-2xl font-bold">📫 Contact Me</h2>
+        <h2 className="text-2xl font-bold mt-20">📫 Contact Me</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <ContactButton link="mai&#108;to&#58;emile&#46;&#116;u%&#55;&#50;&#99;&#37;6&#70;t&#37;&#55;4e160&#37;&#51;8&#64;&#103;&#109;ail&#46;com">

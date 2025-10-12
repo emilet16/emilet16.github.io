@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sansFont.variable} antialiased grid grid-rows-[auto_1fr_auto] min-h-screen pb-20 gap-8`}
+        className={`${sansFont.variable} antialiased grid grid-rows-[1fr_20px] min-h-screen pb-20 gap-8`}
       >
-        <header className="w-full flex justify-center shadow-md">
+        <header className="fixed w-full flex justify-center shadow-md z-10">
           <Navbar />
         </header>
 
