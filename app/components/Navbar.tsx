@@ -12,7 +12,7 @@ export default function Navbar() {
          ${isOpen ? 'h-screen md:h-20' : 'h-15'}`}>
             <div className="max-w-3xl mx-auto flex flex-col p-4">
                 <div className="flex items-center justify-between">
-                    <Link href="/" className="text-xl font-bold hover:underline">Émile Turcotte</Link>
+                    <NavLink href="#about" className="text-xl font-bold" close={() => {setIsOpen(false)}}>Émile Turcotte</NavLink>
                 
                     <div className="hidden md:flex gap-6 ml-8 items-center text-lg">
                         <NavLink href="#about" close={() => {setIsOpen(false)}}>About</NavLink>

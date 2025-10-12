@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export default function NavLink(
-    { href, children, close }: 
-    { href: string; children: React.ReactNode; close: () => void }) {
+    { href, children, close, className }: 
+    { href: string; children: React.ReactNode; close: () => void; className?: string }) {
 
         const handleClick = (e: any, id: string) => {
             e.preventDefault();
@@ -13,7 +13,7 @@ export default function NavLink(
         };
 
         return (
-            <Link href={href} className="hover:underline active:underline"
+            <Link href={href} className={`hover:underline active:underline ${className ? className : ''}`}
                 onNavigate={(e) => { 
                     handleClick(e, href);
                     close(); 
