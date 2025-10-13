@@ -68,7 +68,7 @@ export default function Home() {
             <Mail className="inline mr-2"/>
             <span>Email</span>
           </ContactButton>
-          <ContactButton link="https://www.linkedin.com/in/emile-turcotte/">
+          <ContactButton link="https://www.linkedin.com/in/emilet16">
             <Image src="/linkedin.png" alt="LinkedIn Logo" width={24} height={24} className="inline mr-2 dark:invert"/>
             <span>LinkedIn</span>
           </ContactButton>
