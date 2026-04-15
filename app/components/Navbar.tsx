@@ -1,44 +1,59 @@
 'use client'
 import React, { useState } from "react";
-import Link from "next/link";
+import Image from 'next/image';
 import { X, Menu } from "lucide-react";
 import NavLink from "./NavLink";
+import ContactButton from "./ContactButton";
 
 export default function Navbar() {
     var [isOpen, setIsOpen] = useState(false);
 
     return(
-        <nav className={`w-full backdrop-blur-lg bg-white/50 dark:bg-neutral-900/50 transition-all duration-300 ease-in-out
-         ${isOpen ? 'h-screen md:h-20' : 'h-15'}`}>
-            <div className="max-w-3xl mx-auto flex flex-col p-4">
-                <div className="flex items-center justify-between">
-                    <NavLink href="#about" className="text-xl font-bold" close={() => {setIsOpen(false)}}>Émile Turcotte</NavLink>
-                
-                    <div className="hidden md:flex gap-6 ml-8 items-center text-lg">
-                        <NavLink href="#about" close={() => {setIsOpen(false)}}>About</NavLink>
+        <nav className="flex flex-col w-full bg-primary-800 text-neutral-100 transition-all duration-300 ease-in-out md:justify-between px-6 py-2 md:px-16 lg:px-24">
+            <div className="flex max-w-7xl w-full mx-auto items-center justify-between gap-4">
+                <NavLink href="#" className="flex-1 flex justify-start text-xl font-bold" closeAction={() => {setIsOpen(false)}}>
+                    <Image src="/logo.svg" alt="Logo" width={40} height={40} />
+                </NavLink>
+            
+                <div className="hidden md:flex gap-10 font-bold items-center justify-center text-md">
+                    <NavLink href="#about" closeAction={() => {setIsOpen(false)}}>About me</NavLink>
 
-                        <NavLink href="#projects" close={() => {setIsOpen(false)}}>Projects</NavLink>
+                    <NavLink href="#projects" closeAction={() => {setIsOpen(false)}}>Projects</NavLink>
 
-                        <NavLink href="#contact" close={() => {setIsOpen(false)}}>Contact</NavLink>
-                    </div>
+                    <NavLink href="#workflow" closeAction={() => {setIsOpen(false)}}>Workflow</NavLink>
+                </div>
 
-                    <div className="md:hidden ml-8">
+                <div className="flex-1 flex justify-end items-center">
+                    <ContactButton className="hidden md:flex" href="#contact" closeAction={() => {setIsOpen(false)}}>
+                        Get in touch
+                    </ContactButton>
+
+                    <div className="md:hidden">
                         <button onClick={()=>setIsOpen(!isOpen)} className="text-2xl font-bold">
                             {isOpen ? <X size={32}/> : <Menu size={32}/>}
                         </button>
                     </div>
                 </div>
+            </div>
 
-                <div className={`${isOpen ? 'visible opacity-100' : 'invisible opacity-0'} md:hidden transition-opacity duration-300 ease-in-out`}>
-                    <ul className="space-y-4 mt-4 flex flex-col text-lg">
+            <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out md:hidden ${
+                isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+            }`}>
+                <div className="overflow-hidden">
+                    <ul className="space-y-4 mt-4 mb-8 flex flex-col font-bold text-md items-center">
                         <li>
-                            <NavLink href="#about" close={() => {setIsOpen(false)}}>About</NavLink>
+                            <NavLink href="#about" closeAction={() => {setIsOpen(false)}}>About me</NavLink>
                         </li>
                         <li>
-                            <NavLink href="#projects" close={() => {setIsOpen(false)}}>Projects</NavLink>
+                            <NavLink href="#projects" closeAction={() => {setIsOpen(false)}}>Projects</NavLink>
                         </li>
                         <li>
-                            <NavLink href="#contact" close={() => {setIsOpen(false)}}>Contact</NavLink>
+                            <NavLink href="#workflow" closeAction={() => {setIsOpen(false)}}>Workflow</NavLink>
+                        </li>
+                        <li>
+                            <ContactButton href="#contact" closeAction={() => {setIsOpen(false)}}>
+                                Get in touch
+                            </ContactButton>
                         </li>
                     </ul>
                 </div>

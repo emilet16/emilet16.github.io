@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export default function ContactButton(
+export default function BlueContactButton(
     { href, children, closeAction = () => {}, className = '' }: 
     { href: string; children: React.ReactNode; closeAction?: () => void; className?: string }) 
 {
@@ -15,7 +15,7 @@ export default function ContactButton(
     };
 
     return (
-        <Link href={href} className={`flex whitespace-nowrap bg-neutral-100 hover:bg-neutral-300 active:bg-neutral-300 text-neutral-800 
+        <Link href={href} className={`flex whitespace-nowrap bg-primary-800 text-neutral-100 hover:bg-primary-700 hover:bg-primary-700
             px-2 py-1 rounded-lg font-bold shadow-sm hover:shadow-lg active:shadow-none border border-transparent active:border-neutral-800 transition ${className}`}
             onNavigate={(e) => { 
                 handleClick(e, href);
@@ -23,8 +23,8 @@ export default function ContactButton(
             }}>
                 <div className="flex items-center justify-center gap-2 text-xl">
                     {children}
-                    <div className="flex items-center justify-center aspect-square rounded-full bg-accent-800">
-                        <ArrowUpRight size={40} className="inline m-1 text-neutral-100 stroke-2" />
+                    <div className="flex items-center justify-center aspect-square rounded-full bg-neutral-100">
+                        <ArrowUpRight size={40} className="inline m-1 text-accent-800 stroke-2" />
                     </div>
                 </div>
             </Link>

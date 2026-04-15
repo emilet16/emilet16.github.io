@@ -1,11 +1,18 @@
+'use client';
 import Link from "next/link";
 
 export default function NavLink(
-    { href, children, close, className }: 
-    { href: string; children: React.ReactNode; close: () => void; className?: string }) {
+    { href, children, closeAction = () => {}, className = '' }: 
+    { href: string; children: React.ReactNode; closeAction?: () => void; className?: string }) {
 
         const handleClick = (e: any, id: string) => {
             e.preventDefault();
+
+            if (id === '#' || id === '') {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                return;
+            }
+
             const section = document.querySelector(id);
             if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
@@ -13,10 +20,10 @@ export default function NavLink(
         };
 
         return (
-            <Link href={href} className={`hover:underline active:underline ${className ? className : ''}`}
+            <Link href={href} className={`hover:underline active:underline ${className}`}
                 onNavigate={(e) => { 
                     handleClick(e, href);
-                    close(); 
+                    closeAction(); 
                 }}>
                     {children}
                 </Link>

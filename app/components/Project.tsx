@@ -1,24 +1,30 @@
 import Image from "next/image";
-import SlideUp from "./SlideUp";
 
-export default function Project(props: { title: string, subtitle: string, description: string, imageURL: string, githubURL?: string }) {
-  return (
-    <SlideUp>
-      <div className="col-span-2 md:col-span-1 bg-gray-100 dark:bg-gray-800 shadow-md/30 rounded-xl p-4 flex flex-col justify-center">
-        <Image src={props.imageURL} width={1080} height={1080} alt="Project Image" className="aspect-square object-cover"/>
-        <br />
-        <h3 className="text-xl font-bold mt-2 md:mt-0">{props.title}</h3>
-        <h4 className="text-lg">{props.subtitle}</h4>
-        <hr />
-        <p className="text-md mt-2">{props.description}</p>
-        {props.githubURL && (
-          <a href={props.githubURL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center mt-4 p-2 bg-gray-200 dark:bg-gray-700
-          rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors hover:scale-105 active:scale-95 transition-transform ease-in-out duration-300">
-            <Image src="/github.svg" alt="GitHub Logo" width={24} height={24} className="inline mr-2 dark:invert"/>
-            <span>View on GitHub</span>
-          </a>
-        )}
-      </div>
-    </SlideUp>
-  );
-} 
+export default function Project({ title, description, imageSrc, github_url }: { title: string; description: string; imageSrc: string; github_url: string }) {
+    return (
+        <div className="flex flex-col md:flex-row w-full items-stretch justify-between border border-neutral-300 rounded-lg overflow-hidden p-4 md:p-6 gap-4">
+            <div className="flex flex-col w-full md:w-1/2 items-start justify-start">
+                <div>
+                    <h3 className="text-3xl font-bold text-neutral-700 font-display tracking-tight">{title}</h3>
+                    <p className="text-lg lg:text-xl text-neutral-700 pt-4">{description}</p>
+                </div>
+                
+                <a href={github_url} target="_blank" rel="noopener noreferrer" className="mt-6">
+                    <div className="flex flex-row whitespace-nowrap bg-primary-800 text-neutral-100
+                        hover:bg-primary-700 active:border-neutral-800 px-2 py-1 rounded-lg font-bold 
+                        shadow-sm hover:shadow-lg active:shadow-none border border-transparent 
+                        justify-between items-center gap-2 text-xl transition">
+                        View on GitHub
+                        <Image src="/github.svg" alt="" width={40} height={40} className="inline m-1"/>
+                    </div>
+                </a>
+            </div>
+            <div className="w-full md:w-1/2 max-w-[400px] flex items-center justify-center">
+                <Image src={imageSrc} alt={`${title} screenshot`} 
+                width={800} height={600} 
+                className="rounded-lg object-cover border border-neutral-800/75" 
+                sizes="(max-width: 768px) 100vw, 50vw" />
+            </div>
+        </div>
+    );
+}

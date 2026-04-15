@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
 const sansFont = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const displayFont = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
 });
 
@@ -21,18 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sansFont.variable} antialiased grid grid-rows-[1fr_20px] min-h-screen pb-20 gap-8`}
+        className={`${sansFont.variable} ${displayFont.variable} flex flex-col min-h-svh`}
       >
-        <header className="fixed w-full flex justify-center shadow-md z-10">
+        <header className="w-full flex justify-center fixed top-0 z-50">
           <Navbar />
         </header>
 
-        <main className="flex justify-center p-8">
+        <main className="flex-1">
           {children}
         </main>
 
-        <footer className="flex justify-center text-sm">
-          © {new Date().getFullYear()} Émile Turcotte
+        <footer className="flex pt-2 pb-10 justify-center text-sm bg-primary-800 text-neutral-100">
+          © {new Date().getFullYear()} - Émile Turcotte
         </footer>
       </body>
     </html>
