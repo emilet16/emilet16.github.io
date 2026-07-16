@@ -59,6 +59,11 @@ export default function Home() {
         </div>
 
         <Project 
+        title="Report automation app"
+        description="Independently designed and developed a full-stack report automation application (C#, .NET, Blazor, SQL, Excel)
+        that reduced report generation time by up to 85%, from 5–15 minutes to under 2 minutes."/>
+
+        <Project 
         title="Quartier: The Bluetooth Business Card" 
         description="Quartier is an iOS/Android mobile app where users can
         create and share custom business cards with others in proxmity using Bluetooth.
