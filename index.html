@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Émile Turcotte | Computer science, University of Waterloo</title>
+  <meta name="description" content="Émile Turcotte, computer science student at the University of Waterloo. I question how work gets done, then build the faster way. Looking for spring 2027 co-op roles.">
+  <meta name="theme-color" content="#1c1917">
+  <link rel="canonical" href="https://eturcotte.dev/">
+
+  <!-- Open Graph / link previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eturcotte.dev/">
+  <meta property="og:title" content="Émile Turcotte | Computer science, University of Waterloo">
+  <meta property="og:description" content="I question how work gets done, then build the faster way. Looking for spring 2027 co-op roles.">
+  <meta property="og:image" content="https://eturcotte.dev/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts: Fraunces (display), Instrument Sans (text), JetBrains Mono (labels, code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flag JS early so scroll-reveal content is only hidden when the script will reveal it. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="em-nav site-nav">
+    <a class="em-nav__brand" href="#home">Émile Turcotte</a>
+    <nav class="em-nav__links" aria-label="Primary">
+      <a class="em-nav__link is-active" href="#home" aria-current="location">Home</a>
+      <a class="em-nav__link" href="#projects">Projects</a>
+      <a class="em-nav__link" href="#about">About</a>
+      <a class="em-nav__link" href="#resume">Resume</a>
+      <a class="em-nav__link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Home -->
+    <section id="home" class="wrap hero">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" style="color: var(--ink-muted)" data-reveal>Computer science, University of Waterloo</p>
+          <h1 class="h-xl" data-reveal style="--i:1">I question how work gets done, then build the faster way.</h1>
+          <p class="lead read" data-reveal style="--i:1">I'm a computer science student who looks at an existing workflow, asks why it takes so long, and rebuilds it. My internship report tool cut report time by up to 85%, saving 500+ hours a year. I'm looking for spring co-op roles starting in May 2027.</p>
+          <div class="hero__actions" data-reveal style="--i:1">
+            <a class="em-btn em-btn--primary" href="#projects">View projects<span class="em-btn__arrow" aria-hidden="true">→</span></a>
+            <a class="em-btn em-btn--secondary" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="stat" aria-label="Selected result" data-reveal style="--i:1">
+          <p class="label muted-label">Selected result</p>
+          <p class="label stat__kicker">Saved every year</p>
+          <p class="stat__num" style="margin:0">500+</p>
+          <p class="text text--ink">hours, from cutting report time by up to 85% (5 to 15 minutes down to under 2) with a web app I built as an intern at ALCT.</p>
+          <div style="margin-top: var(--space-2)">
+            <a class="em-btn em-btn--ghost" href="#projects">See the project<span class="em-btn__arrow" aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="wrap sec" aria-labelledby="projects-title">
+      <div class="sec__head" data-reveal>
+        <h2 class="h-lg" id="projects-title">Projects</h2>
+        <p class="lead read">Two projects, each of which started with a workflow I questioned. I lead with the result, then how I rebuilt the process.</p>
+      </div>
+
+      <div class="projects">
+        <article class="em-card em-card--featured" data-reveal>
+          <div class="em-card__media">
+            <div class="bars">
+              <div class="bar-row">
+                <span class="label" style="color: var(--ink-muted)">Before</span>
+                <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--before"></div></div>
+                <span class="bar-val">5 to 15 min</span>
+              </div>
+              <div class="bar-row">
+                <span class="label" style="color: var(--ink-muted)">After</span>
+                <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill--after"></div></div>
+                <span class="bar-val">under 2 min</span>
+              </div>
+              <span class="bars__note">Bars to scale, with the before time shown at its slowest (15 minutes).</span>
+            </div>
+          </div>
+          <div class="em-card__body">
+            <div class="em-card__meta">2026 / Software developer intern</div>
+            <h3 class="em-card__title">Report automation at ALCT</h3>
+            <p class="em-card__summary">Cut report time by up to 85%, from 5 to 15 minutes down to under 2, saving 500+ hours a year by replacing a Crystal Reports and Excel workflow with a C#, Blazor and SQL web app.</p>
+            <ul class="em-card__tags">
+              <li><span class="em-tag">C#</span></li>
+              <li><span class="em-tag">.NET</span></li>
+              <li><span class="em-tag">Blazor</span></li>
+              <li><span class="em-tag">SQL</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="em-card" data-reveal style="--i:1">
+          <div class="em-card__body">
+            <div class="em-card__meta">2025</div>
+            <h3 class="em-card__title">Quartier: the Bluetooth business card</h3>
+            <p class="em-card__summary">I questioned the QR-scan-and-type way of swapping contacts and built a cross-platform Bluetooth prototype that finds nearby phones in 2 s at up to 10 m. Tested with 5 people, then shelved it when customer interviews showed no path to monetization.</p>
+            <ul class="em-card__tags">
+              <li><span class="em-tag">Swift</span></li>
+              <li><span class="em-tag">Kotlin</span></li>
+              <li><span class="em-tag">Bluetooth</span></li>
+              <li><span class="em-tag">Supabase</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="wrap sec" aria-labelledby="about-title">
+      <h2 class="h-lg" id="about-title" style="margin-bottom: var(--space-6)" data-reveal>About</h2>
+      <div class="read stack stack--4" data-reveal>
+        <p class="lead text--ink" style="color: var(--ink)">I'm in the Honours Co-op computer science program at the University of Waterloo. I question the way things are done, especially when a process costs people time, and I build the tool that does it in a fraction of that.</p>
+        <p class="text">Before Waterloo I founded the Dawson Business Association, a student entrepreneurship community that grew from 0 to 50+ members. In summer 2026 I interned at ALCT, where I replaced a slow report workflow and saved 500+ hours a year. I'm looking for spring co-op roles starting in May 2027, ideally on a team where I can own a feature from design through to release.</p>
+      </div>
+      <div class="focus stack stack--3" data-reveal>
+        <p class="label muted-label">Current focus</p>
+        <ul class="tag-list">
+          <li><span class="em-tag">Full-stack development</span></li>
+          <li><span class="em-tag">Workflow automation</span></li>
+          <li><span class="em-tag">Mobile apps</span></li>
+          <li><span class="em-tag">Startups</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="wrap sec" aria-labelledby="resume-title">
+      <div class="resume__head" data-reveal>
+        <h2 class="h-lg" id="resume-title">Resume</h2>
+        <a class="em-btn em-btn--secondary" href="assets/resume.pdf">Download PDF</a>
+      </div>
+
+      <p class="label group-label">Experience</p>
+      <div class="tl" data-reveal>
+        <p class="label muted-label">Jun. 2026 to Aug. 2026</p>
+        <div class="tl__body">
+          <h3 class="h-md">Software developer intern</h3>
+          <p class="text text--ink">ALCT, Saint-Jean-sur-Richelieu, QC</p>
+          <ul class="text tl__list">
+            <li>Interviewed 6 daily users and reverse-engineered their Crystal Reports and Excel workflow, then replaced it with a C#, Blazor and SQL web app, saving 500+ hours a year (up to 85% less time per report) and retiring the old process.</li>
+            <li>Traced 60 s report loads to poorly structured joins across nested SQL views and restructured them, cutting generation to 5 s (92%).</li>
+            <li>Designed a config-driven report engine so new reports ship in 15 to 30 minutes instead of 3 hours.</li>
+            <li>Deployed on-premises, iterated on post-launch user feedback, and onboarded the team with documentation for a clean handoff.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl" data-reveal>
+        <p class="label muted-label">Jan. 2025 to May 2026</p>
+        <div class="tl__body">
+          <h3 class="h-md">Founder and president</h3>
+          <p class="text text--ink">Dawson Business Association, Montreal, QC</p>
+          <ul class="text tl__list">
+            <li>Founded a student entrepreneurship community at Dawson, where none existed, growing it from 0 to 50+ members.</li>
+            <li>Ran idea-validation workshops for 10 students that pushed them to test assumptions before building; 4 of 10 pivoted, narrowed or dropped their idea.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="label group-label">Education</p>
+      <div class="tl" data-reveal>
+        <p class="label muted-label">Sep. 2026 to Jun. 2030</p>
+        <div class="tl__body">
+          <h3 class="h-md">Bachelor of Computer Science, Honours Co-op</h3>
+          <p class="text text--ink">University of Waterloo, Waterloo, ON</p>
+        </div>
+      </div>
+
+      <p class="label group-label">Skills</p>
+      <dl class="skills" data-reveal>
+        <div class="tl"><dt class="label">Languages</dt><dd class="text text--ink">C#, Python, SQL (Postgres), TypeScript, Go, Kotlin, Swift</dd></div>
+        <div class="tl"><dt class="label">Frameworks</dt><dd class="text text--ink">React, Node.js, .NET, Blazor</dd></div>
+        <div class="tl"><dt class="label">Developer tools</dt><dd class="text text--ink">Git, Docker, GitHub Actions</dd></div>
+      </dl>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap sec" aria-labelledby="contact-title">
+      <div class="contact" data-reveal>
+        <h2 class="h-lg" id="contact-title">Contact</h2>
+        <p class="lead read">I'm open to co-op and new grad roles. Email is the fastest way to reach me.</p>
+        <div class="contact__actions">
+          <a class="em-btn em-btn--primary" href="mailto:eturcotte@uwaterloo.ca">Send email</a>
+          <a class="em-btn em-btn--ghost" href="https://github.com/emilet16" target="_blank" rel="noopener noreferrer">GitHub<span class="em-btn__arrow" aria-hidden="true">→</span></a>
+          <a class="em-btn em-btn--ghost" href="https://www.linkedin.com/in/emilet16" target="_blank" rel="noopener noreferrer">LinkedIn<span class="em-btn__arrow" aria-hidden="true">→</span></a>
+        </div>
+        <p class="small">I usually reply within a day.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap site-footer">
+    <div class="site-footer__row">
+      <span>Émile Turcotte, 2026</span>
+      <div class="site-footer__links">
+        <a href="https://github.com/emilet16">GitHub</a>
+        <a href="https://www.linkedin.com/in/emilet16">LinkedIn</a>
+        <a href="mailto:eturcotte@uwaterloo.ca">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Scroll reveal: once per element, skipped entirely if IntersectionObserver is missing.
+      var items = document.querySelectorAll('[data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var reveal = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); reveal.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        items.forEach(function (el) { reveal.observe(el); });
+      }
+
+      // Scrollspy: mark the nav link of the section in view (underline + colour + aria-current).
+      var links = document.querySelectorAll('.em-nav__link');
+      var sections = ['home', 'projects', 'about', 'resume', 'contact']
+        .map(function (id) { return document.getElementById(id); }).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            links.forEach(function (a) {
+              var on = a.getAttribute('href') === '#' + e.target.id;
+              a.classList.toggle('is-active', on);
+              if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+            });
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(function (s) { spy.observe(s); });
+      }
+    })();
+  </script>
+</body>
+</html>
